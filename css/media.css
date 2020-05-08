@@ -1,0 +1,140 @@
+/*-------Для 700px*-------*/
+@media (max-width: 700px) {
+  .header__contacts-btn {
+    float: none;
+  }
+  .header__contacts {
+    text-align: center;
+  }
+  .menu__content {
+    display: none;
+    position: absolute;
+    left: -110px;
+    top: -34px;
+  }
+  .menu__content-item {
+    display: block;
+  }
+  .menu__content-link {
+    display: block;
+    background-color: #ffc222;
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+  .menu__content-link:hover {
+    display: block;
+    border: 1px solid #ffc222;
+    transition: all 0.5s;
+    color: #ffc222;
+    color: #323232;
+  }
+  .menu__media-btn {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    float: none;
+    left: 1;
+    right: 0;
+  }
+  .header__logo-link {
+    margin: 0;
+  }
+  .consultation__inner {
+    background-image: none;
+  }
+  .slider__content {
+    padding: 75px 0 0 0;
+  }
+  .services__bot-buy {
+    margin: 0 0 0 10px;
+  }
+  .formbox__inner {
+    flex-direction: column;
+  }
+  .label__top-info {
+    margin: 0 0 0 0px;
+  }
+  .label__top-line:after {
+    display: none;
+  }
+  .checkbox__inner {
+    flex-direction: column;
+  }
+  .checkbox__item {
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    max-width: 330px;
+    width: 100%;
+  }
+
+  .checkbox__item:before {
+    bottom: 190px;
+  }
+}
+@media (min-width: 700px) {
+  .menu__content {
+    display: block !important;
+  }
+  .checkbox{
+    min-height: 500px;
+  }
+  .checkbox__item:before{
+    bottom: 280px;
+  }
+}
+/*-------------700--------------------*/
+/*--------Для 1010px*-------*/
+@media (max-width: 1010px) {
+  .slick__btn {
+    top: 103%;
+  }
+  .services__bot-buy {
+    margin: 0 0 0 10px;
+  }
+}
+/*-------------------------------*/
+/*-------------1150px*------------*/
+@media (max-width: 1150px) {
+  .container__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+  }
+  .services__bot-item {
+    margin: 30px 0 10px 0;
+    max-width: 600px;
+    width: 100%;
+  }
+  .services__bot-btns {
+    max-width: 400px;
+    display: block;
+  }
+  .services__bot-more {
+    display: inline-block;
+  }
+  .services__bot-buy {
+    display: inline-block;
+    margin: 0 0 0 60px;
+  }
+  body {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #5e5e5e;
+  }
+}
+@media (min-width: 900px){
+  .checkbox__item:before {
+    bottom: 235px;
+  }
+  .checkbox{
+    min-height: 400px;
+  }
+
+}

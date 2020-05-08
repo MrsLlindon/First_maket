@@ -1,0 +1,840 @@
+/*-----Общие настройки------
+-------обнуление------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #5e5e5e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+input,
+textarea,
+select {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*-----Общие настройки------
+-------Общие конфигурации элементов----*/
+.label__top-inner {
+  position: relative;
+}
+.label__top-info {
+  max-width: 376px;
+  margin: 0 0 0 142px;
+  padding: 0 0 14px 0;
+}
+.label__top-line:after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  float: left;
+  width: 110px;
+  background-color: #ffc222;
+  top: 25px;
+}
+.label__top-title {
+  color: #212020;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.label__top-text {
+  color: #5e5e5e;
+  font-family: "PT Serif";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+}
+.default-btn {
+  position: relative;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.35px;
+  padding: 8px 30px 8px 24px;
+  border: 1px solid #ffc222;
+  border-right-width: 20px;
+}
+.default-btn:hover {
+  background-color: #ffc222;
+  transition: 0.3s;
+}
+.default-btn:before {
+  position: absolute;
+  content: "\f105";
+  font-family: "icomoon";
+  right: -13px;
+  top: 20%;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+/*
+  Styles for animated modal
+  =========================
+*/
+/* Start state */
+.animated-modal {
+  max-width: 550px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: none;
+  transform: translateY(-50px);
+  transition: all 0.7s;
+}
+.animated-modal h2,
+.animated-modal p {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.4s;
+}
+/* Final state */
+.fancybox-slide--current .animated-modal,
+.fancybox-slide--current .animated-modal h2,
+.fancybox-slide--current .animated-modal p {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Reveal content with different delays */
+.fancybox-slide--current .animated-modal h2 {
+  transition-delay: 0.1s;
+}
+.fancybox-slide--current .animated-modal p {
+  transition-delay: 0.3s;
+}
+/*--------------------*/
+/*------Форма анимации-------*/
+.formboxanimated {
+  max-width: 850px;
+  width: 100%;
+  min-height: 300px;
+}
+.formboxanimated__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.formboxanimated__inner-left {
+  margin: 0 30px 0 0;
+  max-width: 200px;
+  width: 100%;
+}
+.labelanimated__input {
+  margin: 0 0 5px 0;
+}
+.labelanimated__input-title {
+  color: #282828;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 36px;
+}
+.formboxanimated__input {
+  height: 30px;
+  padding: 0 10px;
+}
+.formboxanimated__message,
+.formboxanimated__input {
+  display: block;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+}
+.formboxanimated__message {
+  min-height: 200px;
+}
+.formboxanimated__right-btn {
+  float: right;
+  background-color: transparent;
+  color: #323232;
+  line-height: 14px;
+  padding: 5px;
+}
+/*------Шапка-----*/
+.header {
+  font-family: "Roboto", sans-serif;
+}
+.header__top {
+  background-color: #303030;
+}
+.header__contacts:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.header__contacts-phone {
+  color: #cbcacb;
+  letter-spacing: 0.25px;
+  line-height: 47px;
+  padding: 0 34px 0 20px;
+  position: relative;
+}
+.header__contacts-phone:before {
+  content: "\f095";
+  font-family: "icomoon";
+  position: absolute;
+  left: 0;
+  color: #ffc222;
+}
+.header__contacts-email {
+  color: #cbcacb;
+  letter-spacing: 0.25px;
+  line-height: 47px;
+  padding: 0 0 0 24px;
+  position: relative;
+}
+.header__contacts-email:before {
+  content: "\f003";
+  font-family: "icomoon";
+  position: absolute;
+  left: 0;
+  color: #ffc222;
+}
+.header__contacts-btn {
+  float: right;
+  font-size: 16px;
+  line-height: 36px;
+  background-color: #ffc222;
+  padding: 6px 20px 5px 50px;
+  position: relative;
+  color: #1b1b1b;
+}
+.header__contacts-btn:before {
+  content: "\f0b1";
+  font-family: "icomoon";
+  position: absolute;
+  left: 22px;
+  color: #1b1b1b;
+}
+.header__bottom {
+  background-color: #f9f9f9;
+  padding: 34px 0 23px;
+}
+.header__bottom-inner {
+  min-height: 42px;
+  /* position: relative; */
+}
+.header__logo-link {
+  position: absolute;
+  max-width: 145px;
+  margin: 10px 0 0 0;
+}
+.menu {
+  float: right;
+  top: 0;
+  position: relative;
+}
+.menu__media-btn{
+  display: none;
+  position: absolute;
+}
+.menu__content-item {
+  display: inline-block;
+}
+.menu__content-link {
+  position: relative;
+  margin: 2px;
+  color: #323232;
+  font-size: 16px;
+  line-height: 36px;
+  padding: 0 23px;
+  border: 1px solid #f9f9f9;
+}
+.menu__content-link:hover {
+  display: inline-block;
+  border: 1px solid #ffc222;
+  transition: all 0.5s;
+  color: #ffc222;
+}
+/*---Контент----------Слайдер-------*/
+.slider {
+  margin: 0 0 40px 0;
+  position: relative;
+  background-image: url(../img/slider.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  background-position: top;
+}
+.slider:before {
+  background-blend-mode: multiply;
+  opacity: 0.47;
+  background-color: #000000;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.slider__content {
+  text-align: center;
+  padding: 130px 0 0 0;
+  margin: 0 auto;
+  max-width: 665px;
+}
+.slider__content-title {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 22px 0;
+}
+.slider__content-text {
+  color: #d3d2d2;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 45px 0;
+}
+.slick__btn {
+  position: absolute;
+  top: 60%;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+}
+.slick__btn:hover {
+  background-color: #ffc222;
+  transition: 0.3s;
+}
+.slick-next {
+  right: 0;
+  margin: 0 100px 0 0;
+}
+.slick-next::before {
+  content: "\f105";
+  font-family: "icomoon";
+  color: #ffffff;
+}
+.slick-prev {
+  left: 0;
+  margin: 0 0 0 100px;
+}
+.slick-prev::before {
+  content: "\f104";
+  font-family: "icomoon";
+  color: #ffffff;
+}
+/*--------Услуги--------*/
+.services {
+  margin: 0 0 40px 0;
+}
+.services__top-btn {
+  border: 3px solid #e6e6e6;
+  color: #373636;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.35px;
+  padding: 10px 43px;
+}
+.services__top-btn:hover {
+  background-color: #d1d1d1;
+  transition: 0.3s;
+}
+.services__bot {
+  margin: 0 auto;
+}
+.services__bot-item {
+  max-width: 363px;
+  min-height: 366px;
+  box-shadow: 0 7px 24px 3px rgba(91, 89, 89, 0.14);
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 30px 30px;
+  position: relative;
+}
+.services__bot-btns {
+  max-width: 363px;
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services__bot-more {
+  text-decoration: underline;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #323232;
+}
+.services__bot-buy {
+  color: #323232;
+  margin: 0 0 0 90px;
+}
+/*-------О компании---------*/
+.about {
+  position: relative;
+  background-image: url(../img/about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 303px;
+  background-position: top;
+  margin: 0 0 40px 0;
+}
+.about:before {
+  background-blend-mode: multiply;
+  opacity: 0.47;
+  background-color: #000000;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.about__info {
+  max-width: 537px;
+  position: relative;
+  padding: 30px 0 0 0;
+}
+.about__info-title {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.about__info-text {
+  color: #d3d2d2;
+  font-family: "PT Serif";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+}
+.about__info-btn:before {
+  color: #323232;
+}
+/*--------Консультация*--------*/
+.consultation__inner {
+  background-image: url(../img/formgirl.png);
+  background-repeat: no-repeat;
+  min-height: 460px;
+  background-position: bottom right;
+  bottom: 0;
+}
+.formbox {
+  max-width: 850px;
+  width: 100%;
+}
+.formbox__inner {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 40px 0;
+}
+.formbox__inner-left {
+  margin: 0 30px 0 0;
+  max-width: 264px;
+  width: 100%;
+}
+.label__input {
+  margin: 0 0 10px 0;
+}
+.label__input-title {
+  color: #282828;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.formbox__input {
+  height: 40px;
+  padding: 0 10px;
+}
+.formbox__message,
+.formbox__input {
+  display: block;
+  width: 100%;
+  border: 1px solid #e6e6e6;
+}
+.jq-selectbox,
+.jqselect,
+.formbox__select {
+  display: block;
+  width: 100%;
+}
+.jq-selectbox__select {
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 262px;
+  align-items: center;
+  position: relative;
+  background-color: transparent;
+  border-radius: 0;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  box-shadow: none;
+}
+.jq-selectbox__select-text,
+.placeholder {
+  max-width: 220px;
+  width: 100%;
+}
+.jq-selectbox__trigger {
+  max-width: 40px;
+  width: 100%;
+  max-height: 40px;
+  height: 100%;
+  float: right;
+  border-left: 1px solid #e6e6e6;
+  position: relative;
+  box-shadow: none;
+}
+.jq-selectbox__trigger:before {
+  content: "\f107";
+  font-family: "icomoon";
+  color: #323232;
+  right: 13px;
+  top: 9%;
+  position: absolute;
+}
+.jq-selectbox__trigger-arrow {
+  opacity: 0;
+}
+.jq-selectbox__dropdown {
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 37px;
+  bottom: 0%;
+}
+.formbox__inner-rigth {
+  max-width: 552px;
+  width: 100%;
+}
+.formbox__message {
+  min-height: 212px;
+  margin: 0 0 48px 0;
+  resize: none;
+  padding: 5px 10px;
+}
+.formbox__right-btn {
+  float: right;
+  background-color: transparent;
+  color: #323232;
+}
+/*---------Преимущества-------*/
+.checkbox {
+  position: relative;
+  background-image: url(../img/checkboxman.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  min-height: 750px;
+  margin: 0 0 40px 0;
+}
+.checkbox:before {
+  background-blend-mode: multiply;
+  opacity: 0.47;
+  background-color: #000000;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.checkbox__inner {
+  padding: 100px 0 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  margin: 40px 0;
+}
+.checkbox__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 30px 10px 10px 10px;
+  max-width: 330px;
+  width: 100%;
+  margin: 0 20px;
+}
+.checkbox__item:before {
+  position: absolute;
+  content: "\f00c";
+  font-family: "icomoon";
+  color: #fff;
+  bottom: 294px;
+  border: 2px solid #ffc222;
+  width: 43px;
+  height: 30px;
+  padding: 10px 0 0 0;
+}
+.checkbox__title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+}
+.checkbox__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  color: #d3d2d2;
+}
+/*----------Новости---------*/
+.news {
+  margin: 0 0 40px 0;
+}
+.news__inner {
+  margin: 0 0 40px 0;
+}
+.quote {
+  position: relative;
+  max-width: 557px;
+  width: 100%;
+  min-height: 344px;
+  box-shadow: 0 5px 15px 1px rgba(128, 127, 127, 0.13);
+  background-color: #ffffff;
+  padding: 0 38px 48px 73px;
+}
+.quote::before {
+  content: "\f10e";
+  font-family: "icomoon";
+  padding: 10px 26px;
+  border: 1px solid #ffc222;
+  background-color: #ffc222;
+  color: #ffffff;
+}
+.quote__title {
+  margin: 68px 0 0 0;
+  color: #242424;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.9px;
+}
+.quote__text,
+.quote__author {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+}
+.quote__text {
+  color: #5e5e5e;
+}
+.quote__author {
+  color: #212020;
+}
+.slick__btn-quote {
+  width: 43px;
+  height: 43px;
+  border: 1px solid #dadada;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+}
+.slick__btn-quote:hover {
+  background-color: #ffc222;
+  transition: 0.3s;
+}
+.slick-next-quote {
+  right: 0;
+  bottom: 0;
+}
+.slick-next-quote::before {
+  content: "\f105";
+  font-family: "icomoon";
+  color: #908e8e;
+}
+.slick-prev-quote {
+  bottom: 0;
+  right: 60px;
+}
+.slick-prev-quote::before {
+  content: "\f104";
+  font-family: "icomoon";
+  color: #908e8e;
+}
+.newsbox {
+  max-width: 250px;
+  width: 100%;
+  min-height: 337px;
+}
+.newsbox__link {
+  color: #242424;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+}
+.newsbox__link:hover {
+  color: #ffc222;
+  transition: 0.3s;
+}
+.newsbox__text {
+  color: #5e5e5e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+}
+.newsbox__img{
+  max-width: 240px;
+}
+/*-------Подвал--------*/
+.footer {
+  bottom: 0;
+}
+.footer__top {
+  background-color: #595959;
+}
+.footer__top-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+  width: 100%;
+  padding: 20px 0;
+}
+.footer__top-title {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0.8px;
+}
+.footer__top-text {
+  color: #d3d2d2;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0 0 20px 0;
+}
+
+.footer__contacts-phone {
+  display: inline-block;
+  color: #cbcacb;
+  letter-spacing: 0.25px;
+  padding: 0 0 0 20px;
+  position: relative;
+  line-height: 30px;
+}
+.footer__contacts-phone:before {
+  content: "\f095";
+  font-family: "icomoon";
+  position: absolute;
+  color: #ffc222;
+  left: 0;
+}
+.footer__contacts-email {
+  display: inline-block;
+  color: #cbcacb;
+  letter-spacing: 0.25px;
+  padding: 0 0 0 24px;
+  position: relative;
+  line-height: 30px;
+}
+.footer__contacts-email:before {
+  content: "\f003";
+  font-family: "icomoon";
+  position: absolute;
+  left: 0;
+  color: #ffc222;
+}
+.footer__contacts-btn {
+  max-width: 265px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 36px;
+  background-color: #ffc222;
+  padding: 6px 20px 5px 50px;
+  position: relative;
+  color: #1b1b1b;
+  margin: 0 0 20px 0;
+}
+.footer__contacts-btn:before {
+  content: "\f0b1";
+  font-family: "icomoon";
+  position: absolute;
+  color: #1b1b1b;
+  left: 26px;
+}
+.footer__contacts-map {
+  display: inline-block;
+  color: #cbcacb;
+  letter-spacing: 0.25px;
+  padding: 0 0 0 24px;
+  position: relative;
+  line-height: 30px;
+}
+.footer__contacts-map::before {
+  content: "\f041";
+  font-family: "icomoon";
+  position: absolute;
+  left: 0;
+  color: #ffc222;
+}
+.footer__top-map {
+  max-width: 630px;
+  min-height: 250px;
+}
+.footer__bot {
+  background-color: #303030;
+  text-align: center;
+}
+.footer__copy {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+}
